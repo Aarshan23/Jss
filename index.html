@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    /* CSS styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Roboto, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(135deg, #FF6EDC, #7D3CBC, #4CB8C4);
+      font-color: grey;
+    }
+       /*To edit the background and make the page scrollable */
+    .container { width: 90%; max-width: 800px; padding: 20px; text-align: center; color: #fff; animation: gradientAnimation 20s linear infinite; background-color: rgba(255, 255, 255, 0.8); overflow-y: scroll; max-height: calc(100vh - 40px); }
+
+    .person {
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+      text-align: center;
+    }
+    
+    .person img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .person p {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    h1, h2, p {
+      margin: 10px 0;
+    }
+
+    .about-us,
+    .contact-us {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+       50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+       
+    @media (max-width: 600px) {
+      .person img {
+        max-width: 250px;
+      }
+      .person p {
+        font-size: 24px;
+      }
+      .about-us,
+      .contact-us {
+        font-size: 14px;
+      }
+    }
+  </style>
+  <script>
+    // JavaScript function to open CVs
+    function openCV(cvUrl) {
+      window.open(cvUrl, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to The JSS Computer Project</h1>
+    
+    <h2>Students Involved: </h2>
+    <div>
+      <div class="person" onclick="openCV('cv1.html')">
+        <img src="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/Sample project - Acme/img/FB_IMG_1684842111909.jpg" alt="Person 1">
+        <p>Aarsan Trital</p>
+      </div>
+      <div class="person" onclick="openCV('cv2.html')">
+        <img src="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/Sample project - Acme/img/FB_IMG_1684842086114.jpg" alt="Person 2">
+        <p>Shishir Basnet</p>
+      </div>
+      <div class="person" onclick="openCV('cv3.html')">
+        <img src="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/Sample project - Acme/img/Screenshot_20230523-172941_Facebook.jpg" alt="Person 3">
+        <p>Rakam Karki</p>
+      </div>
+      <div class="person" onclick="openCV('cv4.html')">
+        <img src="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/Sample project - Acme/img/FB_IMG_1684842123588.jpg" alt="Person 4">
+        <p>Utsab Bajgain</p>
+      </div>
+      <div class="person" onclick="openCV('cv5.html')">
+        <img src="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/Sample project - Acme/img/FB_IMG_1684842377983.jpg" alt="Person 5">
+        <p>Prince Katuwal</p>
+      </div>
+    </div>
+    
+    <h2>About Us</h2>
+    <p class="about-us"></p>This is a school project made by the students of grade 8, currently reading in JSS.</p>
+    
+    <h2>Contact Us</h2>
+    <p class="contact-us">You can reach us at <a href="mailto:aarshantrital60@gmail.com">aarshantrital60@gmail.com</a> or by phone at <a href="tel:+9779842567890">+977 9842-567-890</a></p>
+  </div>
+</body>
+</html>
